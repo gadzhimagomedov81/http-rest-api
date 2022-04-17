@@ -1,6 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target 'all'.  Stop.
- 
+
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Mar 28 00:24:21 2022
+# Make data base, printed on Mon Apr 18 00:09:02 2022
 
 # Variables
 
@@ -91,7 +91,7 @@ PATH = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/logan-PC:@/tmp/.ICE-unix/974,unix/logan-PC:/tmp/.ICE-unix/974
+SESSION_MANAGER = local/logan-PC:@/tmp/.ICE-unix/1102,unix/logan-PC:/tmp/.ICE-unix/1102
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -111,7 +111,7 @@ XDG_SESSION_DESKTOP = mate
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 1580
+GIO_LAUNCHED_DESKTOP_FILE_PID = 10316
 # automatic
 %F = $(notdir $%)
 # environment
@@ -127,7 +127,7 @@ QT_QPA_PLATFORMTHEME = qt5ct
 # environment
 XDG_SEAT = seat0
 # environment
-SSH_AGENT_PID = 1130
+SSH_AGENT_PID = 1258
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = MATE
 # environment
@@ -163,7 +163,7 @@ MAKECMDGOALS := all
 # environment
 SHLVL = 0
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-8583768e-30ca-4d39-91b6-ef746f11ea98.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-9f12d8ed-e348-49dc-8e33-2d318d5ba0ee.sock
 # environment
 COMPIZ_CONFIG_PROFILE = mint
 # environment
@@ -222,7 +222,7 @@ LC_MEASUREMENT = ru_RU.UTF-8
 LC_ALL = C
 # automatic
 ^F = $(notdir $^)
-# makefile (from 'Makefile', line 6)
+# makefile (from 'Makefile', line 9)
 DEFAULT_GOAL := build
 # default
 SUFFIXES := 
@@ -241,7 +241,7 @@ LC_ADDRESS = ru_RU.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 1580
+VSCODE_PID = 10316
 # variable set hash-table stats:
 # Load=115/1024=11%, Rehash=0, Collisions=13/140=9%
 
@@ -251,11 +251,10 @@ VSCODE_PID = 1580
 
 # Directories
 
-# . (device 66306, inode 21760661): 12 files, no impossibilities.
+# . (device 66306, inode 21760661): 13 files, no impossibilities.
 
-# 12 files, no impossibilities in 1 directories.
+# 13 files, no impossibilities in 1 directories.
 
- 
 # Implicit Rules
 
 # No implicit rules.
@@ -269,25 +268,33 @@ all:
 #  File does not exist.
 #  File has not been updated.
 
-.PHONY:
+.PHONY: build test
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 2):
-	build
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-03-27 23:23:58.443954582
+#  Last modified 2022-03-28 00:30:37.706187571
 #  File has been updated.
 #  Successfully updated.
 
-build:
+test:
+#  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
-#  Modification time never checked.
+#  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 4):
+#  recipe to execute (from 'Makefile', line 7):
+ 
+	go test -v -race -timeout 30s ./...
+
+build:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 3):
 	go build -v ./cmd/apiserver
 
 # Not a target:
@@ -297,19 +304,19 @@ build:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=6/1024=1%, Rehash=0, Collisions=0/16=0%
+# Load=7/1024=1%, Rehash=0, Collisions=0/22=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 19 / storage = 150 B / avg = 7 B
-# current buf: size = 8162 B / used = 150 B / count = 19 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 21 / storage = 166 B / avg = 7 B
+# current buf: size = 8162 B / used = 166 B / count = 21 / avg = 7 B
 
-# strcache performance: lookups = 25 / hit rate = 24%
+# strcache performance: lookups = 32 / hit rate = 34%
 # hash-table stats:
-# Load=19/8192=0%, Rehash=0, Collisions=1/25=4%
-# Finished Make data base on Mon Mar 28 00:24:21 2022
+# Load=21/8192=0%, Rehash=0, Collisions=1/32=3%
+# Finished Make data base on Mon Apr 18 00:09:02 2022
 
  
